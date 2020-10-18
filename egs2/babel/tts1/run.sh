@@ -6,7 +6,6 @@ set -u
 set -o pipefail
 
 ./tts.sh \
-    --lang en \
     --train_set train_nodev \
     --valid_set train_dev \
     --test_sets "train_dev test test_seg" \
