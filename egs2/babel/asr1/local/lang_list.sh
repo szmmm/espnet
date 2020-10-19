@@ -1,3 +1,5 @@
+echo "this is ${BABEL_106}"
+
 # Cantonese
 train_data_dir_101=${BABEL_101}/release-current/conversational/training
 train_data_list_101=./conf/lists/101-cantonese/train.LimitedLP.list
