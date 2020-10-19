@@ -15,11 +15,12 @@ log() {
 
 langs="106"
 recog="106"
+BABEL="BABEL"
 
 for l in ${langs} ${recog}; do
-  echo "${"BABEL_${l}"}"
-  if [ ! -e "${"BABEL_${l}"}" ]; then
-      log "Fill the value of 'BABEL_${l}' of db.sh"
+  echo "${BABEL}_${l}""
+  if [ ! -e ${BABEL}_${l} ]; then
+      log "Fill the value of ${BABEL}_${l} of db.sh"
       exit 1
   fi
 done
