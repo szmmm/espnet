@@ -102,7 +102,8 @@ GetOptions("fragmentMarkers=s" => \$fragMarkers,
            );
 
 if ($#ARGV == 1) {
-    $inDir  = $ARGV[0];
+    #$inDir  = $ARGV[0];
+    $inDir = "/home/babel2/BABEL_BP_106/releaseB/import/BABEL_BP_106"
     $outDir = $ARGV[1];
     print STDERR ("$0: This is inDir $inDir and $outDir\n");
     if($vocabFile) {
