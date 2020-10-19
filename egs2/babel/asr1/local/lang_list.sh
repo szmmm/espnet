@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "this is ${BABEL_106}"
-. ./db.sh || exit 1;
+. ./../db.sh || exit 1;
 echo "this is ${BABEL_106}"
 
 # Cantonese
