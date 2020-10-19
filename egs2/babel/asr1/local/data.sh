@@ -19,7 +19,7 @@ BABEL="BABEL"
 
 for l in ${langs} ${recog}; do
   echo "${BABEL}_${l}"
-  if [ ! -e ${"BABEL_${l}"} ]; then
+  if [ ! -e ${"${BABEL}_${l}"} ]; then
       log "Fill the value of ${BABEL}_${l} of db.sh"
       exit 1
   fi
