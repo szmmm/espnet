@@ -18,7 +18,7 @@ recog="106"
 
 for l in ${langs} ${recog}; do
   echo "${BABEL_106}"
-  if [ ! -e ${"${BABEL}_${l}"} ]; then
+  if [ ! -e "BABEL_${l}" ]; then
       log "Fill the value of '${BABEL}_${l}' of db.sh"
       exit 1
   fi
