@@ -48,13 +48,13 @@ dev10h_data_list_105=./conf/lists/105-turkish/dev.list
 lexicon_file_105=${BABEL_105}/release-current-b/conversational/reference_materials/lexicon.sub-train.txt
 
 # Tagalog
-train_data_dir_106=${BABEL_106}/release-current/conversational/training
+train_data_dir_106=${BABEL_106}/conversational/training
 train_data_list_106=./conf/lists/106-tagalog/train.LimitedLP.list
-train_data_dir_106_FLP=${BABEL_106}/release-current/conversational/training
+train_data_dir_106_FLP=${BABEL_106}/conversational/training
 train_data_list_106_FLP=./conf/lists/106-tagalog/train.FullLP.list
-dev10h_data_dir_106=${BABEL_106}/release-current/conversational/dev
+dev10h_data_dir_106=${BABEL_106}/conversational/dev
 dev10h_data_list_106=./conf/lists/106-tagalog/dev.list
-lexicon_file_106=${BABEL_106}/release-current/conversational/reference_materials/lexicon.txt
+lexicon_file_106=${BABEL_106}/conversational/reference_materials/lexicon.txt
 
 # Vietnamese
 train_data_dir_107=${BABEL_107}/release-current/conversational/training
