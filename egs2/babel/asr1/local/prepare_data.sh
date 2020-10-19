@@ -52,6 +52,7 @@ fi
 dev10h_data_dir=`utils/make_absolute.sh ./data/raw_dev10h_data`
 train_data_dir=`utils/make_absolute.sh ./data/raw_train_data`
 lexicon_file=lexicon_file_${l_suffix}
+echo "This is $lexicon_file"
 
 if [[ ! -f data/train/wav.scp || data/train/wav.scp -ot "$train_data_dir" ]]; then
   echo ---------------------------------------------------------------------
