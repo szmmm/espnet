@@ -104,7 +104,7 @@ GetOptions("fragmentMarkers=s" => \$fragMarkers,
 if ($#ARGV == 1) {
     $inDir  = $ARGV[0];
     $outDir = $ARGV[1];
-    print STDERR ("$0: $inDir $outDir\n");
+    print STDERR ("$0: This is inDir $inDir and $outDir\n");
     if($vocabFile) {
 	print STDERR ("\tLimiting transcriptions to words in $vocabFile\n");
 	print STDERR ("\tMapping OOV tokens to \"$OOV_symbol\"\n");
