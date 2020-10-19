@@ -1,8 +1,4 @@
-#!/bin/bash
-
-echo "this is ${BABEL_106}"
-. ./../db.sh || exit 1;
-echo "this is ${BABEL_106}"
+BABEL_106=/home/babel2/BABEL_BP_106/releaseB/import/BABEL_BP_106
 
 # Cantonese
 train_data_dir_101=${BABEL_101}/release-current/conversational/training
