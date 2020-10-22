@@ -17,7 +17,6 @@ langs="106"
 recog=""
 
 for l in ${langs}; do
-  echo ${BABEL_106}
   if [ ! -e ${BABEL_106} ]; then
       log "Fill the value of 'BABEL_${l}' of db.sh"
       exit 1
