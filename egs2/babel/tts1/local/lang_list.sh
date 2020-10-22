@@ -51,20 +51,20 @@ lexicon_file_105=${BABEL_105}/release-current-b/conversational/reference_materia
 
 # Tagalog
 train_data_dir_106=${BABEL_106}/conversational/training
-train_data_list_106=./conf/lists/106-tagalog/train.LimitedLP.list
+train_data_list_106=~/yr4project/espnet/tools/kaldi/egs/babel/s5d/conf/lists
 train_data_dir_106_FLP=${BABEL_106}/conversational/training
-train_data_list_106_FLP=./conf/lists/106-tagalog/train.FullLP.list
+train_data_list_106_FLP=~/yr4project/espnet/tools/kaldi/egs/babel/s5d/conf/lists
 dev10h_data_dir_106=${BABEL_106}/conversational/dev
-dev10h_data_list_106=./conf/lists/106-tagalog/dev.list
+dev10h_data_list_106=~/yr4project/espnet/tools/kaldi/egs/babel/s5d/conf/lists
 lexicon_file_106=${BABEL_106}/conversational/reference_materials/lexicon.txt
 
 # Vietnamese
 train_data_dir_107=${BABEL_107}/release-current/conversational/training
-train_data_list_107=~/yr4project/espnet/tools/kaldi/egs/babel/s5d/conf/lists
+train_data_list_107=./conf/lists/107-vietnamese/train.LimitedLP.list
 train_data_dir_107_FLP=${BABEL_107}/release-current/conversational/training
-train_data_list_107_FLP=~/yr4project/espnet/tools/kaldi/egs/babel/s5d/conf/lists
+train_data_list_107_FLP=./conf/lists/107-vietnamese/train.FullLP.list
 dev10h_data_dir_107=${BABEL_107}/release-current/conversational/dev
-dev10h_data_list_107=~/yr4project/espnet/tools/kaldi/egs/babel/s5d/conf/lists
+dev10h_data_list_107=./conf/lists/107-vietnamese/dev.list
 lexicon_file_107=${BABEL_107}/release-current/conversational/reference_materials/lexicon.sub-train.txt
 
 # Haitian
