@@ -14,7 +14,7 @@ log() {
 
 
 langs="106"
-recog=""
+recog="106"
 
 for l in ${langs}; do
   if [ ! -e ${BABEL_106} ]; then
