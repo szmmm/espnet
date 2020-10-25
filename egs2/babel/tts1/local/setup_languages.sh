@@ -8,7 +8,7 @@
 . ./local/lang_list.sh
 
 langs="101 102 103 104 105 106 202 203 204 205 206 207 301 302 303 304 305 306 401 402 403"
-recog="107 201 307 404"
+test="107 201 307 404"
 FLP=true
 
 . ./utils/parse_options.sh
@@ -17,7 +17,7 @@ set -e
 set -o pipefail
 
 all_langs=""
-for l in `cat <(echo ${langs}) <(echo ${recog}) | tr " " "\n" | sort -u`; do
+for l in `cat <(echo ${langs}) <(echo ${test}) | tr " " "\n" | sort -u`; do
   all_langs="${l} ${all_langs}"
 done
 all_langs=${all_langs%% }
@@ -66,14 +66,14 @@ for l in ${langs}; do
   train_dirs="data/${l}/data/train_${l} ${train_dirs}"
 done
 
-for l in ${recog}; do
+for l in ${test}; do
   dev_dirs="data/${l}/data/dev_${l} ${dev_dirs}"
 done
 
 ./utils/combine_data.sh data/train ${train_dirs}
 ./utils/combine_data.sh data/dev ${dev_dirs}
 
-for l in ${recog}; do
+for l in ${test}; do
   ln -s ${cwd}/data/${l}/data/eval_${l} ${cwd}/data/eval_${l}
   ln -s ${cwd}/data/${l}/data/dev_${l} ${cwd}/data/dev_${l}
 done

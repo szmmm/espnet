@@ -14,7 +14,7 @@ log() {
 
 
 langs="106"
-recog="106"
+test="106"
 
 for l in ${langs}; do
   if [ ! -e ${BABEL_106} ]; then
@@ -33,14 +33,14 @@ set -o pipefail
 train_set=train
 train_dev=dev
 
-recog_set=""
-for l in ${recog}; do
-  recog_set="dev_${l} eval_${l} ${recog_set}"
+test_set=""
+for l in ${test}; do
+  test_set="dev_${l} eval_${l} ${test_set}"
 done
-recog_set=${recog_set%% }
+test_set=${test_set%% }
 
-./local/setup_languages.sh --langs "${langs}" --recog "${recog}"
-for x in ${train_set} ${train_dev} ${recog_set}; do
+./local/setup_languages.sh --langs "${langs}" --test "${test}"
+for x in ${train_set} ${train_dev} ${test_set}; do
    sed -i.bak -e "s/$/ sox -R -t wav - -t wav - rate 16000 dither | /" data/${x}/wav.scp
 done
 
