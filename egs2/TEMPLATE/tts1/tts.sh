@@ -554,12 +554,15 @@ if ! "${skip_train}"; then
                 --output_dir "${_logdir}/stats.JOB" \
                 ${_opts} ${train_args} || { cat "${_logdir}"/stats.1.log; exit 1; }
 
+        echo "echo point 1"
+
         # 4. Aggregate shape files
         _opts=
         for i in $(seq "${_nj}"); do
             _opts+="--input_dir ${_logdir}/stats.${i} "
         done
         ${python} -m espnet2.bin.aggregate_stats_dirs ${_opts} --output_dir "${tts_stats_dir}"
+        echo "echo point 2"
 
         # Append the num-tokens at the last dimensions. This is used for batch-bins count
         <"${tts_stats_dir}/train/text_shape" \
@@ -570,6 +573,7 @@ if ! "${skip_train}"; then
             awk -v N="$(<${token_list} wc -l)" '{ print $0 "," N }' \
             >"${tts_stats_dir}/valid/text_shape.${token_type}"
     fi
+    echo "echo point 3"
 
 
     if [ ${stage} -le 6 ] && [ ${stop_stage} -ge 6 ]; then
