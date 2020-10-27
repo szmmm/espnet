@@ -1,1 +1,1 @@
-qsub -cwd -j yes -P esol -l qp=cuda-low -l gpuclass='*' -l osrel='*' ./run.sh --stage 6 --stop-stage 6 --ngpu 4
+qsub -cwd -j yes -l qp=cuda-low -l gpuclass='*' -l osrel='*' ./run.sh --stage 6 --stop-stage 7 --ngpu 4
