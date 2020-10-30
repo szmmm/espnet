@@ -5,10 +5,8 @@ set -e
 set -u
 set -o pipefail
 
-fs=16000
-n_fft=2048
-n_shift=300
-win_length=1200
+fs=8000
+fmax=5000
 
 train_set=train
 valid_set=dev
@@ -24,7 +22,10 @@ nlsyms_txt=data/nlsym.txt
 
 
 ./tts.sh \
-    --feats_type raw \
+    --lang tagalog \
+    --feats_type fbank \
+    --fs "${fs}" \
+    --fmax "${fmax}" \
     --token_type phn \
     --cleaner tacotron \
     --train_config "${train_config}" \
