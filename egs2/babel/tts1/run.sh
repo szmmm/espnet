@@ -28,7 +28,7 @@ nlsyms_txt=data/nlsym.txt
     --fs "${fs}" \
     --fmax "${fmax}" \
     --win_length "${win_length}" \
-    --token_type phn \
+    --token_type char \
     --cleaner tacotron \
     --train_config "${train_config}" \
     --inference_config "${inference_config}" \
