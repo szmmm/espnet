@@ -15,7 +15,7 @@ valid_set=dev
 
 langs="106"
 test="106"
-test_sets="dev_${l} eval_${l}"
+test_sets="dev_${langs} eval_${langs}"
 
 train_config=conf/train.yaml
 inference_config=conf/decode.yaml
