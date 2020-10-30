@@ -10,7 +10,7 @@
 . ./cmd.sh
 
 #FLP=true
-#FLP=false
+FLP=true
 
 . ./utils/parse_options.sh
 if [ $# -ne 1 ]; then
