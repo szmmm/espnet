@@ -16,8 +16,8 @@ langs="106"
 test="106"
 test_sets="dev_${langs} eval_${langs}"
 
-train_config=conf/train.yaml
-inference_config=conf/decode.yaml
+train_config=conf/tuning/train_gst_tacotron2.yaml
+inference_config=conf/tuning/decode_tacotron2.yaml
 
 nlsyms_txt=data/nlsym.txt
 
