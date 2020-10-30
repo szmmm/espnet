@@ -7,7 +7,7 @@ set -o pipefail
 
 fs=8000
 fmax=5000
-win_length=1200
+win_length=200
 
 train_set=train
 valid_set=dev
