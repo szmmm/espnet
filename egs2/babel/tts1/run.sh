@@ -9,7 +9,7 @@ fs=8000
 fmax=5000
 win_length=200
 n_mels=40
-
+inference_model=11epoch.pth
 train_set=train
 valid_set=dev
 
@@ -33,6 +33,7 @@ nlsyms_txt=data/nlsym.txt
     --token_type char \
     --cleaner tacotron \
     --train_config "${train_config}" \
+    --inference_model "${inference_model}" \
     --inference_config "${inference_config}" \
     --train_set "${train_set}" \
     --valid_set "${valid_set}" \
