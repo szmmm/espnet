@@ -8,7 +8,7 @@ set -o pipefail
 fs=8000
 fmax=5000
 win_length=200
-n_mels=40
+n_mels=80
 train_set=train
 valid_set=dev
 
@@ -28,7 +28,6 @@ nlsyms_txt=data/nlsym.txt
     --fs "${fs}" \
     --fmax "${fmax}" \
     --win_length "${win_length}" \
-    --n_mels "${n_mels}" \
     --token_type char \
     --cleaner tacotron \
     --train_config "${train_config}" \
