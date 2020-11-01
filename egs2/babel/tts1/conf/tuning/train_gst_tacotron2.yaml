@@ -39,7 +39,7 @@ tts_conf:                        # keyword arguments for the selected model
     spk_embed_dim: null          # speaker embedding dimension
     use_masking: true            # whether to apply masking for padded part in loss calculation
     bce_pos_weight: 10.0         # weight of positive sample in binary cross entropy calculation
-    use_guided_attn_loss: false  # whether to use guided attention loss
+    use_guided_attn_loss: true # whether to use guided attention loss
     guided_attn_loss_sigma: 0.4  # sigma of guided attention loss
     guided_attn_loss_lambda: 1.0 # strength of guided attention loss
 
