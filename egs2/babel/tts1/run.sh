@@ -6,9 +6,12 @@ set -u
 set -o pipefail
 
 fs=8000
-fmax=5000
+fmin=125           # Minimum frequency of Mel basis.
+fmax=3800         # Maximum frequency of Mel basis.
+n_fft=512        # The number of fft points.
+n_shift=128
 win_length=200
-n_mels=80
+
 train_set=train
 valid_set=dev
 
@@ -27,6 +30,9 @@ nlsyms_txt=data/nlsym.txt
     --feats_type raw \
     --fs "${fs}" \
     --fmax "${fmax}" \
+    --fmin "${fmin}" \
+    --n_fft "${n_fft}" \
+    --n_shift "${n_shift}" \
     --win_length "${win_length}" \
     --token_type char \
     --cleaner tacotron \
