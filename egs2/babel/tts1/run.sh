@@ -10,7 +10,7 @@ fmin=125           # Minimum frequency of Mel basis.
 fmax=3800         # Maximum frequency of Mel basis.
 n_fft=512        # The number of fft points.
 n_shift=128
-win_length=200
+#win_length=200
 
 train_set=train
 valid_set=dev
@@ -33,7 +33,6 @@ nlsyms_txt=data/nlsym.txt
     --fmin "${fmin}" \
     --n_fft "${n_fft}" \
     --n_shift "${n_shift}" \
-    --win_length "${win_length}" \
     --token_type char \
     --cleaner tacotron \
     --train_config "${train_config}" \
