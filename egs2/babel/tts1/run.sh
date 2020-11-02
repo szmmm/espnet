@@ -8,8 +8,8 @@ set -o pipefail
 fs=8000
 fmin=125           # Minimum frequency of Mel basis.
 fmax=3800         # Maximum frequency of Mel basis.
-n_fft=512        # The number of fft points.
-n_shift=128
+n_fft=400        # The number of fft points.
+n_shift=100
 #win_length=200
 
 train_set=train
@@ -27,7 +27,7 @@ nlsyms_txt=data/nlsym.txt
 
 ./tts.sh \
     --lang tagalog \
-    --feats_type raw \
+    --feats_type fbank \
     --fs "${fs}" \
     --fmax "${fmax}" \
     --fmin "${fmin}" \
