@@ -41,7 +41,7 @@ test_set=${test_set%% }
 
 ./local/setup_languages.sh --langs "${langs}" --test "${test}"
 for x in ${train_set} ${train_dev} ${test_set}; do
-   sed -i.bak -e "s/$/ sox -R -t wav - -t wav - rate 16000 dither | /" data/${x}/wav.scp
+   sed -i.bak -e "s/$/ sox -R -t wav - -t wav - rate 8000 dither | /" data/${x}/wav.scp
 done
 
 cut -f 2- data/${train_set}/text | tr " " "\n" | sort | uniq | grep "<" > data/nlsym.txt
