@@ -27,7 +27,7 @@ nlsyms_txt=data/nlsym.txt
 
 ./tts.sh \
     --lang tagalog \
-    --feats_type raw \
+    --feats_type fbank \
     --fs "${fs}" \
     --fmax "${fmax}" \
     --fmin "${fmin}" \
