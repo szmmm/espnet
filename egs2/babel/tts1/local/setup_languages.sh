@@ -51,7 +51,7 @@ done
 for l in ${all_langs}; do
   (
     cd data/${l}
-    ./local/prepare_data.sh --FLP false ${l}
+    ./local/prepare_data.sh --FLP true ${l}
     cd ${cwd}
   ) &
 done
