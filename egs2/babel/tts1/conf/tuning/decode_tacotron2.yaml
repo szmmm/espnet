@@ -13,3 +13,4 @@ minlenratio: 0.0          # minimum length of generated samples = input length *
 use_att_constraint: false # Whether to use attention constraint, which is introduced in Deep Voice 3
 backward_window: 1        # Backward window size in the attention constraint
 forward_window: 3         # Forward window size in the attention constraint
+use_teacher_forcing: true
