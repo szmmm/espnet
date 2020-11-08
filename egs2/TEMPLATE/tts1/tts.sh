@@ -856,7 +856,7 @@ if ! "${skip_eval}"; then
         log "Generate '${tts_exp}/${inference_tag}/run.sh'. You can resume the process from stage 7 using this script"
         mkdir -p "${tts_exp}/${inference_tag}"; echo "${run_args} --stage 7 \"\$@\"; exit \$?" > "${tts_exp}/${inference_tag}/run.sh"; chmod +x "${tts_exp}/${inference_tag}/run.sh"
 
-
+        test_sets=train_debug ######################### THIS LINE IS FOR DEBUGGING, DELETE WHEN NOT DEBUGGING #############################
         for dset in ${test_sets}; do
             _data="${data_feats}/${dset}"
             _speech_data="${_data}"
